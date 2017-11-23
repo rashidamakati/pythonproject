@@ -1,0 +1,252 @@
+/*
+Name : Rashida Makati
+Course Name: ICT-4510-1 Advance Website Management
+Current Quarter: Third
+Description: This page is the main css file for the website. It includes the css designing of all the tags included
+in the Website.
+*/
+
+body{
+  font: 15px/1.5 Trattatello, fantasy;
+  padding: 0;
+  margin: 0;
+}
+/* Global */
+.container{
+  width:90%;
+  margin:auto;
+  overflow: hidden;
+}
+
+ul{
+  margin: 0;
+  padding: 0;
+}
+
+/* Header */
+header{
+  background: #ffffff;
+  color: #000000;
+  padding-top: 10px;
+  min-height: 90px;
+  border-bottom: #EE7510  3px solid;
+}
+
+header a{
+  color: #000000;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 16px;
+}
+
+header li{
+  float: left;
+  display: inline-block;
+  padding: 0 20px 0 20px;
+}
+
+
+header #branding{
+  float: left;
+}
+
+header #branding h1{
+  margin: 0;
+  padding-top: 20px;
+  font-family: Luminari, fantasy;
+}
+
+header nav{
+  float: right;
+  margin-top: 30px;
+}
+
+header h1{
+  float: right;
+  padding-top: 20px;
+  font-family: Luminari, fantasy;
+}
+
+header .highlight, header .current a{
+  color: #F07610;
+  font-weight: bold;
+}
+
+header a:hover{
+  color: #F07610;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+/* Showcase */
+#showcase{
+  padding-top: 20px;
+}
+
+/* Boxes */
+#boxes{
+  margin-top: 20px;
+}
+#boxes .box{
+  float: left;
+  text-align: center;
+  width: 30%;
+
+  margin-left: 40px;
+}
+#boxes .box img{
+  width: 280px;
+  height: 250px;
+}
+#boxes .label-menu{
+  text-align: center;
+  padding-top: 10px;
+  font:100px/1.5 'Great Vibes', Helvetica, sans-serif;
+}
+#boxes .box h3{
+  font: 30px/1.5 URW Chancery L, cursive;
+}
+
+/* About Us */
+#map{
+  height: 400px;
+  width: 800px;
+  position: relative;
+  margin-top: 20px;
+}
+#main-col{
+  padding: 20px;
+}
+#main-col h1{
+  font: 35px/1.5 Optima, sans-serif;
+  margin: 0;
+  font-weight: bold;
+  color: #F03424;
+  text-decoration: underline;
+}
+#main-col h3{
+  padding-top: 25px;
+  font: 25px/1.5 Optima, sans-serif;
+  margin: 0;
+  font-weight: bold;
+}
+#main-col ul{
+  padding-top: 15px;
+}
+#main-col li{
+  list-style-type: none;
+  font: 20px/1.5 Optima, sans-serif;
+}
+
+/* Menu Page */
+
+#page-title{
+  padding: 10px;
+  font: 35px/1.5 Optima, sans-serif;
+  font-weight: bold;
+  color: #F03424;
+  text-decoration: underline;
+}
+
+.menu-box{
+  float: left;
+  text-align: center;
+  width: 30%;
+  padding: 15px;
+  height: 350px;
+}
+.menu-box li{
+  list-style-type: none;
+  font: 15px/2.5 Optima, sans-serif
+}
+.menu-box ul{
+  border-right: #EE7510  1px solid;
+
+}
+.menu-box h3{
+  font: 20px/1.5 Optima, sans-serif;
+  font-weight: bold;
+}
+
+/* Gallary Page */
+.gallary-main{
+  float: left;
+  width: 25%;
+  height: 200px;
+  padding: 20px;
+  margin: 10px;
+  position: relative;
+}
+
+.gallary-main img{
+  width: 90%;
+  height: 150px;
+  padding: 10px;
+}
+
+.image-title{
+  padding: 10px;
+  font: 35px/1.5 Optima, sans-serif;
+  font-weight: bold;
+  text-align: center;
+  color: #F03424;
+  text-decoration: underline;
+}
+
+#gallary-col p{
+  font: 15px/1.5 Optima, sans-serif;
+  text-align: center;
+}
+
+/* Contact Form */
+#contactform input, #contactform textarea{
+  width: 40%;
+  padding: 5px;
+}
+#contactform label{
+  font: 18px/1.5 Trebuchet MS, sans-serif;
+}
+
+.Areq{
+  color:#E74C3C;
+  font-weight:bold;
+}
+#contact{
+  margin-top: 25px;
+}
+
+.button_1{
+  margin-top: 20px;
+padding: 10px 20px 11px !important;
+font-size: 18px !important;
+background-color: #F36C8C;
+font-weight: bold;
+text-shadow: 1px 1px #F36C8C;
+color: #ffffff;
+border-radius: 100px;
+-moz-border-radius: 100px;
+-webkit-border-radius: 100px;
+border: 1px solid #F36C8C;
+cursor: pointer;
+box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+-moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+-webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+
+
+}
+
+.formclass{
+  margin-top: 20px;
+
+}
+
+/* Footer */
+ footer{
+   padding: 20px;
+   margin-top: 20px;
+   color: #ffffff;
+   background-color: #EE7510;
+   text-align: center;
+   font: 15px/1.5 Trebuchet MS, sans-serif;
+   font-weight: bold;
+ }

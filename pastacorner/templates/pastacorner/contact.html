@@ -1,0 +1,120 @@
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    {% load staticfiles %}
+    <meta name="viewport" content="width=device-width">
+    <title>Pasta Corner | Contact</title>
+    <link rel="stylesheet" href="{% static 'pastacorner/css/style.css'%}" type="text/css"/>
+
+    <script src="{% static 'pastacorner/js/jquery-1.7.min.js'%}" type="text/javascript" charset="utf-8"></script>
+    <script src="{% static 'pastacorner/js/jquery.validate.js'%}"></script>
+    <script src="{% static 'pastacorner/js/jquery.validate.min.js'%}"></script>
+    <script src="{% static 'pastacorner/js/additional-methods.js'%}"></script>
+    <script src="{% static 'pastacorner/js/additional-methods.min.js'%}"></script>
+
+  </head>
+  <body>
+
+
+    <header>
+      <div class="container">
+        <div id="branding">
+            <img src="{% static 'pastacorner/img/logo.png'%}" style="width:75px;height:75px;">
+          <h1><span class="highlight"> Pasta</span> Corner</h1>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="{% url 'pastacorner:index' %}">Home</a></li>
+            <li><a href="{% url 'pastacorner:about' %}">About</a></li>
+            <li><a href="{% url 'pastacorner:menu' %}">Food Menu</a></li>
+            <li><a href="{% url 'pastacorner:gallary' %}">Gallery</a></li>
+            <li class="current"><a href="{% url 'pastacorner:contact' %}">Contact Us</a></li>
+          </ul>
+
+        </nav>
+      </div>
+
+    </header>
+    <section id="contactform">
+      <div class="container">
+
+        <article id="main-col">
+          <h1 class="page-title">Contact Us</h1>
+          <h3>Fill out the form for further details</h3>
+          <form id="contact" class="quote">
+            <div class="formclass">
+              <label>Full Name</label></br>
+              <input type="text" id="fullname" placeholder="Full Name" required/>
+              <span class="Areq"> *</span>
+            </div>
+            <div class="formclass">
+              <label>Email Id</label></br>
+              <input type="email" id="emailAd" placeholder="Email Address" required/>
+              <span class="Areq"> *</span>
+            </div>
+            <div class="formclass">
+              <label>Message</label></br>
+              <textarea placeholder="Message" id="message" required></textarea>
+              <span class="Areq"> *</span>
+            </div>
+            <button type="submit" class="button_1">Submit Form</button>
+          </form>
+          <p id="display"></p>
+        </article>
+      </div>
+    </section>
+
+
+    <footer>
+      <p>University of Denver ICT4510 Final Project, Copyright &copy; 2017</p>
+    </footer>
+<script>
+$("#contact").validate({
+	submitHandler:	function () {
+    var name = $("#fullname").val();
+    var email = $("#emailAd").val();
+    var msg = $("#message").val();
+    if(name!='' && email != '' && msg!=''){
+      var values = getFormValues();
+  		var url = "process.php";
+  		$.post(url, values, function(json){
+  			displayMessage(json);
+  		});
+    }
+
+	}
+});
+function getFormValues()
+{
+	/* Define Form-Values Object Literal. */
+	var formValues = {};
+
+	/* Load First-Name Value to Form-Values First-Name Property. */
+	formValues.firstName = $("#fullname").val();
+
+	/* Load EMail-Address Value to Form-Values EMail-Address Property. */
+	formValues.emailAddress = $("#emailAd").val();
+
+	/* Load Phone-Number Value to Form-Values Phone-Number Property. */
+	formValues.phoneNumber = $("#message").val();
+
+	/* Return Form-Values Object. */
+	return formValues;
+
+}
+function displayMessage(json)
+{
+	/* Place Display Div object into a variable. */
+	var display = $('#display');
+
+	/* Place JSON Message Paragraph into a data variable. */
+	var data = '</br><p>' + json.message + '</p>';
+
+	/* Display JSON Message on the webpage and gradually fade the input form until transparent. */
+	display.empty().append(data);
+	$('form').fadeOut('slow');
+}
+</script>
+  </body>
+</html>

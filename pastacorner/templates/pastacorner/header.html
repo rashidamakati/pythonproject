@@ -1,0 +1,116 @@
+<!--
+Name : Rashida Makati
+Course Name: ICT-4510-1 Advance Website Management
+Current Quarter: Third
+Description: This is the website for a restaurant. This page includes the header of the website with logo and
+navigation menu. In the body of the page, it contains a jquery slider and menu for the restaurant. The page ends
+with footer.
+-->
+
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    {% load staticfiles %}
+    <meta name="viewport" content="width=device-width">
+    <title>Pasta Corner | Welcome</title>
+    <link rel="stylesheet" href="{% static 'pastacorner/css/style.css'%}" type="text/css"/>
+    <link rel="stylesheet" href="{% static 'pastacorner/css/feature-carousel.css'%}" type="text/css"/>
+    <link rel="stylesheet" href="{% static 'pastacorner/css/fontfamily.css'%}" type="text/css"/>
+
+    <script src="{% static 'pastacorner/js/jquery-1.7.min.js'%}" type="text/javascript" charset="utf-8"></script>
+    <script src="{% static 'pastacorner/js/jquery.featureCarousel.min.js'%}" type="text/javascript" charset="utf-8"></script>
+
+
+    <script type="text/javascript">
+      $(document).ready(function() {
+        var carousel = $("#carousel").featureCarousel({
+
+        });
+
+      });
+    </script>
+
+  </head>
+  <body>
+
+
+
+    <header>
+      <div class="container">
+        <div id="branding">
+          <img src="{% static 'pastacorner/img/logo.png'%}" style="width:75px;height:75px;">
+          <h1><span class="highlight"> Pasta</span> Corner</h1>
+        </div>
+        <nav>
+          <ul>
+            <li class="current"><a href="{% url 'pastacorner:index' %}">Home</a></li>
+            <li><a href="{% url 'pastacorner:about' %}">About</a></li>
+            <li><a href="{% url 'pastacorner:menu' %}">Food Menu</a></li>
+            <li><a href="{% url 'pastacorner:gallary' %}">Gallery</a></li>
+            <li><a href="{% url 'pastacorner:contact' %}">Contact Us</a></li>
+          </ul>
+
+        </nav>
+      </div>
+
+    </header>
+
+    {% block content %}
+
+    {% endblock %}
+
+    <!--
+    <section id="showcase">
+      <div class="container">
+        <div class="carousel-container">
+
+          <div id="carousel">
+            <div class="carousel-feature">
+              <a href="#"><img class="carousel-image" alt="Image Caption" src="img/pasta1.jpeg" style="width:550px;height:350px;"></a>
+            </div>
+            <div class="carousel-feature">
+              <a href="#"><img class="carousel-image" alt="Image Caption" src="img/pasta2.jpeg" style="width:550px;height:350px;"></a>
+            </div>
+            <div class="carousel-feature">
+              <a href="#"><img class="carousel-image" alt="Image Caption" src="img/pasta3.jpg" style="width:550px;height:350px;"></a>
+              </div>
+            <div class="carousel-feature">
+              <a href="#"><img class="carousel-image" alt="Image Caption" src="img/pasta4.jpg" style="width:550px;height:350px;"></a>
+            </div>
+          </div>
+
+          <div id="carousel-left"><img src="img/arrow-left.png" /></div>
+          <div id="carousel-right"><img src="img/arrow-right.png" /></div>
+        </div>
+      </div>
+    </section>
+    <section id='boxes'>
+      <div class="container">
+        <div class="label-menu">Explore Our Dishes</div>
+        <div class="box">
+          <h3>Lunch</h3>
+          <img src="./img/lunch.jpg">
+        </div>
+        <div class="box">
+          <h3>Dinner</h3>
+          <img src="./img/dinner.jpg">
+        </div>
+        <div class="box">
+          <h3>Desserts</h3>
+          <img src="./img/dessert.jpg">
+        </div>
+
+      </div>
+    </section>
+  -->
+
+    <footer>
+      <p>University of Denver ICT4370-1 Final Project, Copyright &copy; 2017</p>
+    </footer>
+
+
+  </body>
+</html>

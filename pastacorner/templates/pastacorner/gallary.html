@@ -1,0 +1,125 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    {% load staticfiles %}
+    <meta name="viewport" content="width=device-width">
+    <title>Pasta Corner | Gallary</title>
+    <link rel="stylesheet" href="{% static 'pastacorner/css/style.css'%}" type="text/css"/>
+    <link rel="stylesheet" href="{% static 'pastacorner/css/feature-carousel.css'%}" type="text/css"/>
+    <link rel="stylesheet" href="{% static 'pastacorner/css/fontfamily.css'%}" type="text/css"/>
+
+    <script src="{% static 'pastacorner/js/jquery-1.7.min.js'%}" type="text/javascript" charset="utf-8"></script>
+    <script src="{% static 'pastacorner/js/jquery.featureCarousel.min.js'%}" type="text/javascript" charset="utf-8"></script>
+
+
+    <script type="text/javascript">
+      $(document).ready(function() {
+        var carousel = $("#carousel").featureCarousel({
+
+        });
+
+      });
+    </script>
+  </head>
+  <body>
+
+
+    <header>
+      <div class="container">
+        <div id="branding">
+          <img src="{% static 'pastacorner/img/logo.png'%}" style="width:75px;height:75px;">
+          <h1><span class="highlight"> Pasta</span> Corner</h1>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="{% url 'pastacorner:index' %}">Home</a></li>
+            <li><a href="{% url 'pastacorner:about' %}">About</a></li>
+            <li><a href="{% url 'pastacorner:menu' %}">Food Menu</a></li>
+            <li class="current"><a href="{% url 'pastacorner:gallary' %}">Gallery</a></li>
+            <li><a href="{% url 'pastacorner:contact' %}">Contact Us</a></li>
+          </ul>
+
+        </nav>
+      </div>
+
+    </header>
+    {% block content %}
+    <section id="gallary">
+      <div class="container">
+
+        <article id="gallary-col">
+          <h1 class="image-title">Image Gallary</h1>
+          <div class="gallary-main">
+              <img src="{% static 'pastacorner/img/img1.jpg'%}" alt="Some image">
+              <p>Description of above image</p>
+          </div>
+          <div class="gallary-main">
+              <img src="{% static 'pastacorner/img/img2.jpg'%}" alt="Another image">
+              <p>Description of above image</p>
+          </div>
+          <div class="gallary-main">
+              <img src="{% static 'pastacorner/img/img3.jpg'%}" alt="Some image">
+              <p>Description of above image</p>
+          </div>
+          <div class="gallary-main">
+              <img src="{% static 'pastacorner/img/img4.jpg'%}" alt="Some image">
+              <p>Description of above image</p>
+          </div>
+          <div class="gallary-main">
+              <img src="{% static 'pastacorner/img/img5.jpg'%}" alt="Some image">
+              <p>Description of above image</p>
+          </div>
+          <div class="gallary-main">
+              <img src="{% static 'pastacorner/img/img6.jpg'%}" alt="Some image">
+              <p>Description of above image</p>
+          </div>
+          <div class="gallary-main">
+              <img src="{% static 'pastacorner/img/img7.jpg'%}" alt="Some image">
+              <p>Description of above image</p>
+          </div>
+          <div class="gallary-main">
+              <img src="{% static 'pastacorner/img/img8.jpg'%}" alt="Some image">
+              <p>Description of above image</p>
+          </div>
+          <div class="gallary-main">
+              <img src="{% static 'pastacorner/img/img9.jpg'%}" alt="Some image">
+              <p>Description of above image</p>
+          </div>
+          <div class="gallary-main">
+              <img src="{% static 'pastacorner/img/img10.jpg'%}" alt="Some image">
+              <p>Description of above image</p>
+          </div>
+          <div class="gallary-main">
+              <img src="{% static 'pastacorner/img/img11.jpg'%}" alt="Some image">
+              <p>Description of above image</p>
+          </div>
+          <div class="gallary-main">
+              <img src="{% static 'pastacorner/img/img12.jpg'%}" alt="Some image">
+              <p>Description of above image</p>
+          </div>
+          <div class="gallary-main">
+              <img src="{% static 'pastacorner/img/img13.jpg'%}" alt="Some image">
+              <p>Description of above image</p>
+          </div>
+          <div class="gallary-main">
+              <img src="{% static 'pastacorner/img/img14.jpg'%}" alt="Some image">
+              <p>Description of above image</p>
+          </div>
+          <div class="gallary-main">
+              <img src="{% static 'pastacorner/img/img15.jpg'%}" alt="Some image">
+              <p>Description of above image</p>
+          </div>
+        </article>
+      </div>
+    </section>
+{% endblock %}
+
+    <footer>
+      <p>University of Denver ICT4370-1 Final Project, Copyright &copy; 2017</p>
+    </footer>
+
+
+  </body>
+</html>
